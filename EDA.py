@@ -266,10 +266,9 @@ wc.generate(text)
 plt.figure(figsize=[20,10])
 plt.imshow(wc, interpolation='bilinear')
 plt.axis("off")
-chart_counter[0] += 1
-plt.savefig(f"images/chart_{chart_counter[0]:02d}.png", dpi=150, bbox_inches="tight")
+plt.savefig("images/wordcloud.png", dpi=150, bbox_inches="tight")
 plt.close()
-print(f"  ✅ Salvato: images/chart_{chart_counter[0]:02d}.png")
+print("  ✅ Salvato: images/wordcloud.png (extra, non nel README)")
 
 # 17. Distribuzione date OCG per serie anime
 cards['ocg_date'] = pd.to_datetime(cards['ocg_date'])
@@ -333,6 +332,22 @@ def analisi_serie(nome_serie, sub_data, sheet_prefix):
     print(cm)
     cm.to_excel(writer, sheet_name=f'{sheet_prefix}_MainDeck', index=False)
 
+    # Grafico Spell/Trap per razza
+    if len(fc) > 0:
+        spell_data = fc[fc['type'] == 'Spell Card']
+        if len(spell_data) > 0:
+            fig_spell = px.histogram(spell_data, x='race', color='race')
+            fig_spell.update_layout(title=dict(text=f"Number of 'Spell Card' types per race ({nome_serie})", x=0.5), xaxis_title='Race', yaxis_title='Number of Cards', legend_title_text='Race', width=1200, height=700)
+            fig_spell.update_xaxes(categoryorder='total descending')
+            save_fig(fig_spell)
+
+        trap_data = fc[fc['type'] == 'Trap Card']
+        if len(trap_data) > 0:
+            fig_trap = px.histogram(trap_data, x='race', color='race')
+            fig_trap.update_layout(title=dict(text=f"Number of 'Trap Card' types per race ({nome_serie})", x=0.5), xaxis_title='Race', yaxis_title='Number of Cards', legend_title_text='Race', width=1200, height=700)
+            fig_trap.update_xaxes(categoryorder='total descending')
+            save_fig(fig_trap)
+
     # Grafico razza
     if len(sub_na) > 0:
         fig = px.histogram(sub_na, x='race', color='race')
@@ -347,29 +362,29 @@ analisi_serie('Yu-Gi-Oh!', sub_datasets['Yu-Gi-Oh!'], 'YGO')
 analisi_serie('Yu-Gi-Oh! GX', sub_datasets['Yu-Gi-Oh! GX'], 'GX')
 analisi_serie('Yu-Gi-Oh! 5D', sub_datasets['Yu-Gi-Oh! 5D'], '5D')
 analisi_serie('Yu-Gi-Oh! Zexal', sub_datasets['Yu-Gi-Oh! Zexal'], 'Zexal')
-analisi_serie('Yu-Gi-Oh! Arc-V', sub_datasets['Yu-Gi-Oh! Arc-V'], 'ArcV')
-analisi_serie('Yu-Gi-Oh! VRAINS', sub_datasets['Yu-Gi-Oh! VRAINS'], 'VRAINS')
-analisi_serie('Yu-Gi-Oh! Sevens', sub_datasets['Yu-Gi-Oh! Sevens'], 'Sevens')
 
-# 18. Distribuzione Livelli Mostri Pendulum
+analisi_serie('Yu-Gi-Oh! Arc-V', sub_datasets['Yu-Gi-Oh! Arc-V'], 'ArcV')
+# Extra chart for Arc-V: Pendulum Scale Distribution
 cards_scale = cards.dropna(subset=['scale'])
 category_orders = sorted(cards_scale['scale'].unique())
 fig = px.histogram(cards_scale, x='scale', color='scale', category_orders={'scale': category_orders})
 fig.update_layout(xaxis_title='Scale', yaxis_title='Number of Cards', title_text="Pendulum Monster Scale Distribution", legend_title_text='Scale', title_x=0.5, width=1200, height=700)
 save_fig(fig)
 
-# 19. Distribuzione Linkval
+analisi_serie('Yu-Gi-Oh! VRAINS', sub_datasets['Yu-Gi-Oh! VRAINS'], 'VRAINS')
+# Extra charts for VRAINS: Linkval Distribution + ATK vs Linkval
 cards_link = cards.dropna(subset=['linkval','linkmarkers'])
 category_orders = sorted(cards_link['linkval'].unique())
 fig = px.histogram(cards_link, x='linkval', color='linkval', category_orders={'linkval': category_orders})
 fig.update_layout(xaxis_title='Link Value', yaxis_title='Number of Cards', title_text="Link Value Distribution", legend_title_text='Link Value', title_x=0.5, width=1200, height=700)
 save_fig(fig)
 
-# 20. ATK vs Linkval
 fig = px.scatter(cards_link, x='atk', y='linkval', color='linkval', symbol='has_effect', hover_name="linkmarkers")
 fig.update_layout(legend=dict(orientation="h"))
 fig.update_layout(xaxis_title='Attack Value', yaxis_title='Link Value', title_text="Attack Value vs Link Value", legend_title_text='Has Effect', title_x=0.5, width=1200, height=800)
 save_fig(fig)
+
+analisi_serie('Yu-Gi-Oh! Sevens', sub_datasets['Yu-Gi-Oh! Sevens'], 'Sevens')
 
 # TABELLA: Skill Cards
 skill_cards = cards.loc[(cards['type'] == 'Skill Card')]
