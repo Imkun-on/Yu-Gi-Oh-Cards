@@ -44,8 +44,7 @@
 
 ## 🎮 Introduction
 
-<details>
-<summary><b>👇 Click to learn about the Yu-Gi-Oh! card game</b></summary>
+**👇 About the Yu-Gi-Oh! card game**
 
 Yu-Gi-Oh! is a card game where two players try to defeat each other by reducing the opponent's Life Points (down to 0) using a collection of monster, magic, and trap cards.
 
@@ -58,10 +57,7 @@ In addition to your decks, you'll need some extra items to assist you in the gam
 
 For more information on the card game, visit the following link [How to Play Yu-Gi-Oh! 🎲](https://www.dacardworld.com/gaming/yu-gi-oh-cards/how-to-play#:~:text=%2DGi%2DOh!-,Yu%2DGi%2DOh!,%2C%20spell%2C%20and%20trap%20cards.)
 
-</details>
-
-<details>
-<summary><b>🃏 How is a Yu-Gi-Oh card structured?</b></summary>
+**🃏 How is a Yu-Gi-Oh card structured?**
 
 - **Name**: Each card has its unique name, used to identify the card.
 - **Attribute**: All monsters in the game have one of the 7 attributes: DARK, LIGHT, FIRE, WATER, EARTH, WIND, and DIVINE. Spells/Traps do not have Attributes but indicate whether the card is a Spell or a Trap.
@@ -86,14 +82,11 @@ To enlarge, click on the various cards you find 👇
 <td><a href="https://images.ygoprodeck.com/images/cards/56920308.jpg"><img src="https://images.ygoprodeck.com/images/cards/56920308.jpg" width="150"></a></td>
 </tr></table>
 
-</details>
-
 ---
 
 ## 📊 Dataset
 
-<details>
-<summary><b>📋 View dataset variables (27 columns)</b></summary>
+**📋 Dataset variables (27 columns)**
 
 | Variable | Description |
 |:---------|:------------|
@@ -125,8 +118,6 @@ To enlarge, click on the various cards you find 👇
 | `Tcg_Date` | Publication date of the card in TCG (America, Europe) |
 | `Ocg_Date` | Publication date of the card in OCG (Japan, Asia, China, Korea) |
 | `Has_effect` | Has an effect (1 yes & 0 no) |
-
-</details>
 
 ---
 
@@ -172,8 +163,7 @@ These data confirm that a card's power is not exclusively tied to ATK and DEF va
 
 ## 🃏 Analysis of the types of Yu-Gi-Oh! cards
 
-<details>
-<summary><b>📖 Spell & Trap card type descriptions</b></summary>
+**📖 Spell & Trap card type descriptions**
 
 I begin by examining the **Spell & Trap Zone**, which encompasses various types of cards:
 
@@ -189,8 +179,6 @@ I begin by examining the **Spell & Trap Zone**, which encompasses various types 
 - **Normal Traps:** Can be activated in response to the effects of Effect Monsters, Spell Cards, as well as most other Trap Cards and Quick-Play Spell Cards. No distinctive symbols.
 - **Counter Traps:** Most can only be activated to negate or punish the activation of other cards or the Summoning of monsters. Recognizable by the curved arrow symbol.
 - **Continuous Traps:** Remain on the field after activation. Effects remain active until the owner is unable to pay the cost or fulfill conditions, OR until destroyed.
-
-</details>
 
 [![Chart](images/chart_03.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_03.html)
 
@@ -227,8 +215,7 @@ Here's a list for better understanding:
 
 [![Chart](images/chart_07.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_07.html)
 
-<details>
-<summary><b>📖 What are the most common attributes and which ones are the most favored?</b></summary>
+**What are the most common attributes and which ones are the most favored?**
 
 In both histograms, the "Dark" attribute takes the first position, followed by "Earth," "Light," "Water," "Wind," and "Fire." However, when focusing on preference, the "Light" attribute is more appreciated than "Earth," while "Wind" is less popular than "Fire."
 
@@ -239,8 +226,6 @@ In both histograms, the "Dark" attribute takes the first position, followed by "
 - **Fire:** "Fire" monsters often focus on the "Burn" mechanic, inflicting effect damage. Less appreciated due to the scarcity of notable archetypes.
 - **Wind:** Takes the penultimate position, with the fewest support cards compared to other attributes (excluding "DIVINE").
 - **Divine:** Ranks last, represented by only six monsters, including the famous three Egyptian deities.
-
-</details>
 
 Here is a list of cards by attribute:
 
@@ -272,9 +257,6 @@ In conclusion, the preference for attributes is influenced by a combination of c
 
 From the histogram, it's noticeable that the "warrior" category takes the first place, followed by "machine," "demon," "spellcaster," and "dragon."
 
-<details>
-<summary><b>📖 Detailed race analysis (strengths & weaknesses)</b></summary>
-
 **What makes this category better than the others?**
 
 - **Warrior:** Diverse, versatile, and popular. There are Warriors of every Attribute, mainly EARTH, DARK, and LIGHT. Their varied strategies make them arguably one of the best types.
@@ -294,8 +276,6 @@ Negative:
 - **Pyro:** Very little support over the years. Only "Volcanic" was usable.
 - **Reptile:** Has potential with archetypes like "Aliens" and "Worms," but none came close to being good.
 - **Fish:** There has never been a good Fish-type archetype.
-
-</details>
 
 However, there's a key reason why some types of cards are more common than others, and it's closely tied to the release dates of the cards. Over the years, new card types and races have been introduced, a topic I'll delve into in the [Temporal Analysis](#-temporal-analysis) section.
 
@@ -337,8 +317,7 @@ However, there's a key reason why some types of cards are more common than other
 
 <img src="https://images.ygoprodeck.com/images/cards/14558127.jpg" width="150">
 
-<details>
-<summary><b>📖 Why is Ash Blossom so discussed? And why is Black Luster Soldier so beloved?</b></summary>
+**Why is Ash Blossom so discussed? And why is Black Luster Soldier so beloved?**
 
 **Ash Blossom & Joyous Spring:**
 - **Secret Rare Edition:** Originally printed in the "Maximum Crisis" series in May 2017, a set of three copies could cost up to €200.00.
@@ -347,8 +326,6 @@ However, there's a key reason why some types of cards are more common than other
 **Black Luster Soldier** — the card with the highest number of positive votes, despite having no special effect:
 - **Absence of the Identification Number:** One of the rare cards that lacks the eight-digit ID at the bottom left.
 - **The Card's History:** In the first Yu-Gi-Oh! tournament (1999), the winner received a copy printed in stainless steel. One copy was put up for sale in 2013 at the staggering price of 20 million dollars — settled for "only" 2 million dollars.
-
-</details>
 
 <table><tr>
 <td><a href="https://i.ebayimg.com/images/g/fDAAAOSwUJtgy0B6/s-l1600.jpg"><img src="https://i.ebayimg.com/images/g/fDAAAOSwUJtgy0B6/s-l1600.jpg" width="150"></a></td>
@@ -482,8 +459,7 @@ Reference sources: [🔗 OCG Set Release Order](https://yugioh.fandom.com/wiki/O
 
 [![Chart](images/chart_16.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_16.html)
 
-<details>
-<summary><b>📺 Yu-Gi-Oh!</b></summary>
+### 📺 Yu-Gi-Oh!
 
 [![Chart](images/chart_17.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_17.html)
 [![Chart](images/chart_18.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_18.html)
@@ -491,19 +467,13 @@ Reference sources: [🔗 OCG Set Release Order](https://yugioh.fandom.com/wiki/O
 
 In the context of the type and race of cards, currently there are not many variations, as the only cards present are fusion monsters and ritual monsters.
 
-</details>
-
-<details>
-<summary><b>📺 Yu-Gi-Oh! GX</b></summary>
+### 📺 Yu-Gi-Oh! GX
 
 [![Chart](images/chart_20.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_20.html)
 [![Chart](images/chart_21.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_21.html)
 [![Chart](images/chart_22.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_22.html)
 
-</details>
-
-<details>
-<summary><b>📺 Yu-Gi-Oh! 5D's</b></summary>
+### 📺 Yu-Gi-Oh! 5D's
 
 [![Chart](images/chart_23.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_23.html)
 [![Chart](images/chart_24.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_24.html)
@@ -520,10 +490,7 @@ With the introduction of Yu-Gi-Oh! 5D's, **Synchro** monsters and **Tuner** mons
 <td><a href="https://images.ygoprodeck.com/images/cards/25862681.jpg"><img src="https://images.ygoprodeck.com/images/cards/25862681.jpg" width="150"></a></td>
 </tr></table>
 
-</details>
-
-<details>
-<summary><b>📺 Yu-Gi-Oh! Zexal</b></summary>
+### 📺 Yu-Gi-Oh! Zexal
 
 [![Chart](images/chart_26.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_26.html)
 [![Chart](images/chart_27.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_27.html)
@@ -540,10 +507,7 @@ With Yu-Gi-Oh! Zexal, **Xyz monsters** were introduced. They do not require Spel
 <td><a href="https://images.ygoprodeck.com/images/cards/86848580.jpg"><img src="https://images.ygoprodeck.com/images/cards/86848580.jpg" width="150"></a></td>
 </tr></table>
 
-</details>
-
-<details>
-<summary><b>📺 Yu-Gi-Oh! Arc-V</b></summary>
+### 📺 Yu-Gi-Oh! Arc-V
 
 [![Chart](images/chart_29.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_29.html)
 [![Chart](images/chart_30.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_30.html)
@@ -563,10 +527,7 @@ With Yu-Gi-Oh! Arc-V, a new race **"Wyrm"** and a new card type **Pendulum** car
 <td><a href="https://images.ygoprodeck.com/images/cards/96227613.jpg"><img src="https://images.ygoprodeck.com/images/cards/96227613.jpg" width="150"></a></td>
 </tr></table>
 
-</details>
-
-<details>
-<summary><b>📺 Yu-Gi-Oh! VRAINS</b></summary>
+### 📺 Yu-Gi-Oh! VRAINS
 
 [![Chart](images/chart_33.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_33.html)
 [![Chart](images/chart_34.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_34.html)
@@ -585,10 +546,7 @@ With the sixth Yu-Gi-Oh! series, the **Cyberse** race and **Link Monsters** were
 <td><a href="https://images.ygoprodeck.com/images/cards/93503294.jpg"><img src="https://images.ygoprodeck.com/images/cards/93503294.jpg" width="150"></a></td>
 </tr></table>
 
-</details>
-
-<details>
-<summary><b>📺 Yu-Gi-Oh! Sevens</b></summary>
+### 📺 Yu-Gi-Oh! Sevens
 
 [![Chart](images/chart_38.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_38.html)
 [![Chart](images/chart_39.png)](https://imkun-on.github.io/Yu-Gi-Oh-Cards/charts/chart_39.html)
@@ -604,8 +562,6 @@ With the sixth Yu-Gi-Oh! series, the **Cyberse** race and **Link Monsters** were
 <td><a href="https://images.ygoprodeck.com/images/cards/300302042.jpg"><img src="https://images.ygoprodeck.com/images/cards/300302042.jpg" width="150"></a></td>
 <td><a href="https://images.ygoprodeck.com/images/cards/300201008.jpg"><img src="https://images.ygoprodeck.com/images/cards/300201008.jpg" width="150"></a></td>
 </tr></table>
-
-</details>
 
 ---
 
