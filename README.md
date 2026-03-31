@@ -40,6 +40,13 @@
 | 13 | [📅 Temporal Analysis](#-temporal-analysis) | Evolution across 7 anime series |
 | 14 | [📝 Conclusion](#-conclusion) | Final insights |
 
+## 📡 Data Source                                                                                                                                                                                                                                                                                              
+  The dataset is fetched live from the [YGOProDeck API](https://ygoprodeck.com/api-guide/), a free and public community-driven Yu-Gi-Oh! card database.     
+  | Endpoint | Description |                                                                                                                             
+  |:---------|:------------|
+  | Card Info | Complete card data with views, votes, banlists, and dates |
+  | Card Sets | Card set metadata (set name, code, release date, rarity) |
+
 ---
 
 ## 🎮 Introduction
